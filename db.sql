@@ -33,3 +33,14 @@ CREATE TABLE `accounts` (
     FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
     FOREIGN KEY (advisor_id) REFERENCES advisors(advisor_id)
 );
+
+-- 6. Create fourth table transactions with transaction_id(PK)/ amount/ transaction_type(debit,credit)/ transaction_date/ accountid(fk→Accounts.accountid)
+CREATE TABLE `transactions` (
+    transaction_id INT PRIMARY KEY AUTO_INCREMENT,
+    amount DECIMAL(12,2) NOT NULL,
+    transaction_type ENUM('debit', 'credit') NOT NULL,
+    transaction_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+
+    account_id INT NOT NULL,
+    FOREIGN KEY (account_id) REFERENCES accounts(account_id)
+);
