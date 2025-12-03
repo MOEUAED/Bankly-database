@@ -1,7 +1,7 @@
 -- 1. Create database bankly for adding tables ;
 CREATE DATABASE bankly ; 
 
--- 2. Use database balky ;
+-- 2. Use database bankly ;
 USE bankly ;
 
 -- 3. Create first table Customers with customer_id(pk)/ full_name/ email/ phone/ registration_date ;

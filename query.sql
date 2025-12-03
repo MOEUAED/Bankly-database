@@ -32,10 +32,10 @@ SELECT * FROM transactions WHERE transaction_type = 'debit';
 SELECT * FROM transactions WHERE transaction_type = 'credit';
 
 -- 12. Afficher les transactions du account_id = 1
-SELECT * FROM transactions WHERE accountid = 1;
+SELECT * FROM transactions WHERE account_id = 1;
 
 -- 13. Afficher les customers ayant un account géré par l’advisor_id = 2
-SELECT DISTINCT customers.* FROM customers JOIN accounts ON customers.customer_id = accounts.customerid WHERE accounts.advisorid = 2;
+SELECT DISTINCT customers.* FROM customers JOIN accounts ON customers.customer_id = accounts.customer_id WHERE accounts.advisor_id = 2;
 
 -- 14. Afficher les accounts ayant account_type = "savings"
 SELECT * FROM accounts WHERE account_type = 'savings';
@@ -47,7 +47,7 @@ SELECT * FROM transactions WHERE amount >= 500;
 SELECT * FROM transactions WHERE amount BETWEEN 100 AND 1000;
 
 -- 17. Afficher les accounts du customer_id = 1
-SELECT * FROM accounts WHERE customerid = 1;
+SELECT * FROM accounts WHERE customer_id = 1;
 
 -- 18. Afficher les accounts triés par balance (ordre croissant)
 SELECT * FROM accounts ORDER BY balance ASC;
@@ -73,6 +73,6 @@ SELECT
     advisors.full_name AS advisor_name
 FROM accounts
 LEFT JOIN customers 
-    ON accounts.customerid = customers.customer_id
+    ON accounts.customer_id = customers.customer_id
 LEFT JOIN advisors 
-    ON accounts.advisorid = advisors.advisor_id;
+    ON accounts.advisor_id = advisors.advisor_id;
