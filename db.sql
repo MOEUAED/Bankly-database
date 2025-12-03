@@ -91,3 +91,25 @@ INSERT INTO advisors (full_name, email) VALUES
 ('Thierry Henry','henry@football.com'),
 ('Robert Lewandowski','lewandowski@football.com');
 
+-- 9. create 20 Insertion for accounts table ;
+INSERT INTO accounts (account_number, balance, account_type, customer_id, advisor_id) VALUES
+('ACC3001',12000,'Savings',1,1),
+('ACC3002',5000,'Checking',2,2),
+('ACC3003',8000,'Business',3,3),
+('ACC3004',150,'Checking',4,4),
+('ACC3005',30000,'Savings',5,5),
+('ACC3006',0,'Checking',6,6),
+('ACC3007',2500,'Savings',7,7),
+('ACC3008',9000,'Business',8,8),
+('ACC3009',4500,'Checking',9,9),
+('ACC3010',18000,'Savings',10,10),
+('ACC3011',2200,'Business',11,11),
+('ACC3012',7700,'Checking',12,12),
+('ACC3013',13300,'Savings',13,13),
+('ACC3014',9900,'Business',14,14),
+('ACC3015',1500,'Checking',15,15),
+('ACC3016',8800,'Savings',16,16),
+('ACC3017',12000,'Business',17,17),
+('ACC3018',300,'Checking',18,18),
+('ACC3019',6500,'Savings',19,19),
+('ACC3020',5000,'Business',20,20);
