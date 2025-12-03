@@ -76,3 +76,9 @@ LEFT JOIN customers
     ON accounts.customer_id = customers.customer_id
 LEFT JOIN advisors 
     ON accounts.advisor_id = advisors.advisor_id;
+
+    --BONUS--
+
+-- 24. Ajouter une colonne created_at dans Accounts
+ALTER TABLE accounts
+ADD COLUMN created_at DATETIME DEFAULT CURRENT_TIMESTAMP;
