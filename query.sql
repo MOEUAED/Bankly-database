@@ -33,3 +33,15 @@ SELECT * FROM transactions WHERE transaction_type = 'credit';
 
 -- 12. Afficher les transactions du account_id = 1
 SELECT * FROM transactions WHERE accountid = 1;
+
+-- 13. Afficher les customers ayant un account géré par l’advisor_id = 2
+SELECT DISTINCT customers.* FROM customers JOIN accounts ON customers.customer_id = accounts.customerid WHERE accounts.advisorid = 2;
+
+-- 14. Afficher les accounts ayant account_type = "savings"
+SELECT * FROM accounts WHERE account_type = 'savings';
+
+-- 15. Afficher les transactions avec un amount ≥ 500
+SELECT * FROM transactions WHERE amount >= 500;
+
+-- 16. Afficher les transactions avec un amount entre 100 et 1000
+SELECT * FROM transactions WHERE amount BETWEEN 100 AND 1000;
