@@ -20,3 +20,16 @@ CREATE TABLE `advisors` (
     email VARCHAR(250) NOT NULL UNIQUE
 );
 
+-- 5. Create third table Accounts with account_id(pk)/ account_number/ balance/ account_type(checking,saving,business)/ customerif(fk->customers.customerid)/ advisor(fk->advisor.advisorid)
+CREATE TABLE `accounts` (
+    account_id INT PRIMARY KEY AUTO_INCREMENT,
+    account_number VARCHAR(50) NOT NULL UNIQUE,
+    balance DECIMAL(12,2) NOT NULL DEFAULT 0,
+    account_type ENUM('Checking', 'Savings', 'Business') NOT NULL,
+    
+    customer_id INT NOT NULL,
+    advisor_id INT NOT NULL,
+
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
+    FOREIGN KEY (advisor_id) REFERENCES advisors(advisor_id)
+);
