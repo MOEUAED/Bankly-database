@@ -45,3 +45,34 @@ SELECT * FROM transactions WHERE amount >= 500;
 
 -- 16. Afficher les transactions avec un amount entre 100 et 1000
 SELECT * FROM transactions WHERE amount BETWEEN 100 AND 1000;
+
+-- 17. Afficher les accounts du customer_id = 1
+SELECT * FROM accounts WHERE customerid = 1;
+
+-- 18. Afficher les accounts triés par balance (ordre croissant)
+SELECT * FROM accounts ORDER BY balance ASC;
+
+-- 19. Afficher les transactions triées par amount (ordre décroissant)
+SELECT * FROM transactions ORDER BY amount DESC;
+
+-- 20. Afficher les 5 plus grandes transactions
+SELECT * FROM transactions ORDER BY amount DESC LIMIT 5;
+
+-- 21. Afficher toutes les transactions triées par transaction_date décroissante
+SELECT * FROM transactions ORDER BY transaction_date DESC;
+
+-- 22. Afficher les 3 dernières transactions
+SELECT * FROM transactions ORDER BY transaction_date DESC LIMIT 3;
+
+-- 23. Afficher chaque account avec le nom du customer et le nom de l’advisor (JOIN)
+SELECT 
+    accounts.account_id,
+    accounts.account_number,
+    accounts.balance,
+    customers.full_name AS customer_name,
+    advisors.full_name AS advisor_name
+FROM accounts
+LEFT JOIN customers 
+    ON accounts.customerid = customers.customer_id
+LEFT JOIN advisors 
+    ON accounts.advisorid = advisors.advisor_id;
