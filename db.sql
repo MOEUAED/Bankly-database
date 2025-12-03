@@ -113,3 +113,26 @@ INSERT INTO accounts (account_number, balance, account_type, customer_id, adviso
 ('ACC3018',300,'Checking',18,18),
 ('ACC3019',6500,'Savings',19,19),
 ('ACC3020',5000,'Business',20,20);
+
+-- 10. create 20 Insertion for transactions table ;
+INSERT INTO transactions (amount, transaction_type, account_id) VALUES
+(200,'debit',1),
+(500,'credit',2),
+(1200,'debit',3),
+(50,'credit',4),
+(700,'credit',5),
+(900,'debit',6),
+(20,'debit',7),
+(100,'credit',8),
+(1500,'credit',9),
+(2000,'debit',10),
+(300,'credit',11),
+(400,'debit',12),
+(550,'credit',13),
+(600,'debit',14),
+(750,'credit',15),
+(800,'debit',16),
+(900,'credit',17),
+(1000,'debit',18),
+(1100,'credit',19),
+(1200,'debit',20);
