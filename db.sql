@@ -68,3 +68,26 @@ INSERT INTO customers (full_name, email, phone) VALUES
 ('David Beckham','beckham@mail.com','+441234567890'),
 ('Robert Lewandowski','lewandowski@mail.com','+48123456789');
 
+-- 8. create 20 Insertion for advisors table ;
+INSERT INTO advisors (full_name, email) VALUES
+('Cristiano Ronaldo','cr7@football.com'),
+('Lionel Messi','messi@football.com'),
+('Kylian Mbappe','mbappe@football.com'),
+('Neymar Jr','neymar@football.com'),
+('Sergio Ramos','ramos@football.com'),
+('Karim Benzema','benzema@football.com'),
+('Hakim Ziyech','ziyech@football.com'),
+('Achraf Hakimi','hakimi@football.com'),
+('Riyad Mahrez','mahrez@football.com'),
+('Marouane Chamakh','chamakh@football.com'),
+('Paul Pogba','pogba@football.com'),
+('Zinedine Zidane','zidane@football.com'),
+('Mohamed Salah','salah@football.com'),
+('Gerard Pique','pique@football.com'),
+('Luis Suarez','suarez@football.com'),
+('Andres Iniesta','iniesta@football.com'),
+('Eden Hazard','hazard@football.com'),
+('David Beckham','beckham@football.com'),
+('Thierry Henry','henry@football.com'),
+('Robert Lewandowski','lewandowski@football.com');
+
